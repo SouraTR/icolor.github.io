@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/merge-images"></script>
+
+    <title>iColor-Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">iColor</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Image -->
+
+            <div class="col">
+                <img id="cover" src="./static/cover.png">
+                <img class="img-fluid" id="phone" src="./static/iphone-13-pro-silver.png"
+                    alt="iphone-13-pro-silver-select?wid">
+            </div>
+
+            <!-- Color Selector -->
+
+            <div class="col">
+                <div id="color-selector" class="pos">
+                    <button class="btn btn-dark" onclick="imgChanger('./static/iphone-13-pro-blue.png')">Sierra
+                        Blue</button>
+                    <button class="btn btn-dark" onclick="imgChanger('./static/iphone-13-pro-gold.png')">Gold</button>
+                    <button class="btn btn-dark"
+                        onclick="imgChanger('./static/iphone-13-pro-graphite.png')">Graphite</button>
+                    <button class="btn btn-dark"
+                        onclick="imgChanger('./static/iphone-13-pro-silver.png')">Silver</button>
+                </div>
+
+                <div class="container my-5 pos" id="slider">
+                    <label for="hue" class="form-label">Hue</label>
+                    <input type="range" class="form-range" id="hue" min="0" max="360">
+                    <p id="hueOut">-</p>
+
+                    <label for="saturation" class="form-label">Saturation</label>
+                    <input type="range" class="form-range" id="saturation" min="0" max="300">
+                    <p id="saturationOut">-</p>
+
+                    <label for="lightness" class="form-label">Lightness</label>
+                    <input type="range" class="form-range" id="lightness" min="50" max="300">
+                    <p id="lightnessOut">-</p>
+
+                </div>
+
+                <div class="footer-copyright text-center my-1 pos">
+                    <p>No Copyright: SouraTR</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
